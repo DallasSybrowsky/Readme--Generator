@@ -1,4 +1,3 @@
-
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(answers) {
   const template = `
@@ -11,13 +10,23 @@ ${answers.description}
 
 ## Table of Contents
 
-- [Installation](#installation)
 - [Credits](#credits)
-- [License](#license)
+- [Usage](#usage)
+- [Installation](#installation)
+- [Testing](#testing)
 - [Contribution](#contribution)
-- [Tests](#tests)
+- [License](#license)
 - [Questions](#questions)
 
+
+
+## Credits
+
+This project is the original work of ${answers.userName}. More of my work is available on GitHub at [${answers.gitHub}](https://github.com/${answers.gitHub}).
+
+## Usage
+
+${answers.usageInfo}
 
 ## Installation
 
@@ -27,19 +36,7 @@ In order to install the package, please use the following command:
 ${answers.installCommand}
 \`\`\`
 
-## Usage
-
-
-
-## License
-
-For licensing information please refer to the ${answers.license} information.
-
-## Contribution
-
-${answers.contribution}
-
-## Tests
+## Testing
 
 In order to run tests, please utilize the following command: 
 
@@ -47,9 +44,17 @@ In order to run tests, please utilize the following command:
 ${answers.testCommand}
 \`\`\`
 
+## Contribution
+
+${answers.contribution}
+
+## License
+
+For licensing information please refer to the ${answers.license} license information.
+
 ## Questions
 
-This project was created by ${answers.userName}. If you have any questions, you may contact me directly at: ${answers.email}. More of my work is available at [${answers.gitHub}](https://github.com/${answers.gitHub}).`;
+If you have any questions, you may contact me directly at: ${answers.email}.`;
 
   return template;
 }

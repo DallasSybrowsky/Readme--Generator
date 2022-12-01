@@ -58,6 +58,21 @@ const questions = [
     },
   },
   {
+    type: "input",
+    message: "Please write a short description of how to use this file.",
+    name: "usageInfo",
+    validate: (usageInput) => {
+      if (usageInput) {
+        return true;
+      } else {
+        console.log(
+          "Please write a short description of how to use this file."
+        );
+        return false;
+      }
+    },
+  },
+  {
     type: "list",
     message: "What is the license?",
     name: "license",
@@ -84,7 +99,9 @@ const questions = [
       if (usageInput) {
         return true;
       } else {
-        console.log("What command should be used to install required dependencies?");
+        console.log(
+          "What command should be used to install required dependencies?"
+        );
         return false;
       }
     },
@@ -110,7 +127,9 @@ const questions = [
       if (usageInput) {
         return true;
       } else {
-        console.log("What do people need to know about contributing to the repo?");
+        console.log(
+          "What do people need to know about contributing to the repo?"
+        );
         return false;
       }
     },
@@ -118,7 +137,7 @@ const questions = [
 ];
 
 inquirer.prompt(questions).then((answers) => {
-  fs.writeFile("./readme.md", generateMarkdown(answers), () => {
+  fs.writeFile("./Generated-README.md", generateMarkdown(answers), () => {
     console.log("Generating your README...");
   });
 });
