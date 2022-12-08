@@ -50,7 +50,7 @@ ${answers.contribution}
 
 ## License
 
-For licensing information please refer to the ${answers.license} license information.
+This application is protected under the ${answers.license} license. For detailed licensing information please refer to the ${answers.license} license information.
 
 ## Questions
 
